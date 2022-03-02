@@ -44,6 +44,17 @@
                   </div>
                   <div style="margin-top: 50px;">Our Pools will be launched in</div>
                   <div id="data-coutdown" style="font-size: 40px;">15:06:02</div>
+                  <div style="margin-top: 10px;">
+                     <a href="https://twitter.com/StoneFinance9" rel="noopener noreferrer" target="_blank" style="padding: 10px">
+                      <img alt="twitter" src="img/twitter.svg" width="24" height="24"/>
+                     </a>            
+                     <a href="https://t.me/StoneFinance" rel="noopener noreferrer" target="_blank" style="padding: 10px">
+                        <img alt="telegram" src="img/telegram.svg" width="24" height="24"/>
+                     </a>
+                     <a href="https://discord.gg/xKE3qtemBY" rel="noopener noreferrer" target="_blank" style="padding: 10px">
+                        <img alt="discord" src="img/discord.svg" width="24" height="24"/>
+                     </a>
+                  </div>
                </div>           
             </div>
             <!--header-->
@@ -64,7 +75,7 @@
          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
          
-         document.getElementById("data-coutdown").innerHTML = (days*24+hours) + " : " + minutes + " : " + seconds;
+         document.getElementById("data-coutdown").innerHTML = (days*24+hours) + " : " + (minutes>9?minutes:('0'+minutes)) + " : " + (seconds>9?seconds:('0'+seconds));
          
          if (distance < 0) {
             clearInterval(dom);

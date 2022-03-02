@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Stone Finace</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&amp;display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/content.css?v=1.10">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="description" content="The Stone Finace">
+      <meta name="twitter:image:src" content="img/logo.png?v=1.2">
+      <meta name="twitter:site" content="@The Stone Finace">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="The Stone Finace">
+      <meta name="twitter:description" content="The Stone Finace">
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+   </head>
+   <body class="scrollbar">
+      <!--header-->
+      <div class="header"></div>
+      <!--header-->
+      <div class="body">
+         <!--body home-->
+         <div class="body-content" id="home">
+            <!--header-->
+            <div class="header">
+               <div class="header-body" style=" margin: 50px auto; text-align: center; color: white; font-size: 30px;">
+                  <div>Welcome to</div>
+                  <div>
+                     <img src="img/logo.png" width="50" height="50" style=" position: relative; top: 8px; margin-right: 20px;">
+                     <div style=" display: inline-block; font-size: 50px; ">THE STONE FINANCE</div>
+                  </div>
+                  <div style="margin-top: 50px;">Our Pools will be launched in</div>
+                  <div id="data-coutdown" style="font-size: 40px;">15:06:02</div>
+               </div>           
+            </div>
+            <!--header-->
+         </div>
+         <!--body home-->
+      </div>
+      <!--body-->
+   </body>
+   <script type="text/javascript">
+      var countDownDate = new Date('3/5/2022 05:00:00 PM UTC').getTime();
+
+
+      var dom = setInterval(function(){
+         var now = new Date().getTime();
+         var distance = countDownDate - now;
+         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+         
+         document.getElementById("data-coutdown").innerHTML = (days*24+hours) + " : " + minutes + " : " + seconds;
+         
+         if (distance < 0) {
+            clearInterval(dom);
+            document.getElementById("data-coutdown").innerHTML = "EXPIRED";
+         }         
+        }, 1000);
+    </script>
+</html>
